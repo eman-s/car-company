@@ -1,5 +1,8 @@
 package com.eman;
 
-public class CarFactory {
+import java.util.Set;
 
+public class CarFactory {
+    public State state;
+    public Set<Car> cars;
 }
