@@ -1,68 +1,83 @@
 package com.eman;
 
 public class Car {
-    private String bodyClassification = BodyType.SEDAN;
-    private String engineClassification = EngineType.V;
-    private int cylinders;
-    private int topSpeed;
-    private double fuelCapacityGallons;
-    private String color;
-    private boolean performancePackage;
+    private final String bodyClassification;
+    private final String engineClassification;
+    private final boolean turbo;
+    private final int numberOfSeats;
+    private final int cylinders;
+    private final int topSpeed;
+    private final double fuelCapacityGallons;
+    private final Color color;
+    private final boolean performancePackage;
+
+    private Car(){
+        bodyClassification = BodyType.SUV;
+        engineClassification = EngineType.INLINE;
+        turbo = false;
+        numberOfSeats = 2;
+        cylinders = 8;
+        topSpeed = 300;
+        fuelCapacityGallons = 20;
+        color = Color.RED;
+        performancePackage = false;
+
+    }
+
+    public Car(String bodyClassification, String engineClassification, boolean turbo, int numberOfSeats, int cylinders, int topSpeed, double fuelCapacityGallons, Color color, boolean performancePackage) {
+        this.bodyClassification = bodyClassification;
+        this.engineClassification = engineClassification;
+        this.turbo = turbo;
+        this.numberOfSeats = numberOfSeats;
+        this.cylinders = cylinders;
+        this.topSpeed = topSpeed;
+        this.fuelCapacityGallons = fuelCapacityGallons;
+        this.color = color;
+        this.performancePackage = performancePackage;
+    }
 
     public String getBodyClassification() {
         return bodyClassification;
     }
 
-    public void setBodyClassification(String bodyClassification) {
-        this.bodyClassification = bodyClassification;
-    }
 
     public String getEngineClassification() {
         return engineClassification;
     }
 
-    public void setEngineClassification(String engineClassification) {
-        this.engineClassification = engineClassification;
-    }
 
     public int getCylinders() {
         return cylinders;
     }
 
-    public void setCylinders(int cylinders) {
-        this.cylinders = cylinders;
-    }
 
     public int getTopSpeed() {
         return topSpeed;
     }
 
-    public void setTopSpeed(int topSpeed) {
-        this.topSpeed = topSpeed;
-    }
 
     public double getFuelCapacityGallons() {
         return fuelCapacityGallons;
     }
 
-    public void setFuelCapacityGallons(double fuelCapacityGallons) {
-        this.fuelCapacityGallons = fuelCapacityGallons;
-    }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
 
     public boolean isPerformancePackage() {
         return performancePackage;
     }
 
-    public void setPerformancePackage(boolean performancePackage) {
-        this.performancePackage = performancePackage;
+
+    public boolean isTurbo() {
+        return turbo;
+    }
+
+
+    public int getNumberOfSeats() {
+        return numberOfSeats;
     }
 
 }

@@ -1,7 +1,8 @@
 package com.eman;
 
-public enum SedanColorOptions {
+public enum Color {
     BLACK,
     WHITE,
-    RED
+    BLUE,
+    RED,
 }
